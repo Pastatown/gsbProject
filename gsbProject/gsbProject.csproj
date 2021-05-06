@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37FFA96A-56CB-4303-A9E6-703CF1FF2808}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gsbProject</RootNamespace>
+    <AssemblyName>gsbProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2522.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql, Version=8.18.1730.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AffListeFicheCloBis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheCloBis.Designer.cs">
+      <DependentUpon>AffListeFicheCloBis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AffListeFicheRemBis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheRemBis.Designer.cs">
+      <DependentUpon>AffListeFicheRemBis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AffListeFicheValBis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheValBis.Designer.cs">
+      <DependentUpon>AffListeFicheValBis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="AffListeFicheVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheVal.Designer.cs">
+      <DependentUpon>AffListeFicheVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AffListeFicheClo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheClo.Designer.cs">
+      <DependentUpon>AffListeFicheClo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AffListeFicheRem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AffListeFicheRem.Designer.cs">
+      <DependentUpon>AffListeFicheRem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AffListeFicheRem.resx">
+      <DependentUpon>AffListeFicheRem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AffListeFicheRemBis.resx">
+      <DependentUpon>AffListeFicheRemBis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AffListeFicheVal.resx">
+      <DependentUpon>AffListeFicheVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AffListeFicheClo.resx">
+      <DependentUpon>AffListeFicheClo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fond_d_ecran_mageia.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
